@@ -866,8 +866,8 @@ class Utility(commands.Cog):
         embed.add_field(name="Bot", value="Yes" if m.bot else "No", inline=True)
         await interaction.response.send_message(embed=embed)
 
-    @app_commands.command(name="bot-info", description="Bot information")
-    async def bot_info(self, interaction: discord.Interaction):
+    @app_commands.command(name="about", description="Bot information")
+    async def about_cmd(self, interaction: discord.Interaction):
         embed = discord.Embed(title="Obsidian Marketplace Bot", color=Config.PRIMARY_COLOR)
         embed.set_thumbnail(url=self.bot.user.display_avatar.url)
         embed.add_field(name="Guilds", value=str(len(self.bot.guilds)), inline=True)
